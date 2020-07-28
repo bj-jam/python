@@ -10,7 +10,7 @@ print("你输入的内容是: ", str)
 
 f = open("test", "r")
 
-f.write("Python 是一个非常好的语言。\n是的，的确非常好!!\n")
+f.write(str)
 
 # 关闭打开的文件
 f.close()
@@ -32,3 +32,9 @@ pickle.dump(data1, output)
 pickle.dump(selfref_list, output, -1)
 
 output.close()
+
+f = open("/tmp/foo.txt", "w")
+num = f.write("Python 是一个非常好的语言。\n是的，的确非常好!!\n")
+print(num)
+# 关闭打开的文件
+f.close()
